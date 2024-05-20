@@ -180,7 +180,25 @@
   </div>
 </section>
 
-
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+      <div class="column is-four-fifths">
+        <h3 class="title is-3">Can text encoders of VLMs understand texts compositionally?</h3>
+        <div class="content has-text-justified">
+          <img src="static/images/fig3.png" alt="pipeline" class="center" width="60%"/>
+          <p>
+            Evaluating the sensitivities of text encoders of VLMs to the changes of textual patterns.
+            Specifically, given captions \(  \mathcal{T}_1  \) and \(  \mathcal{T}_2  \) with object words being swapped, we design \(  Q_O \), \(  Q_R \) and \(  Q_{R\&O} \) to assess whether text encoders react correctly to the fine-grained changes of compositionality. 
+            In this case, \(  Q_{R\&O} \), which measures the interaction changes between object words and relation words, should be of a greater value than \( Q_O \) and \( Q_R \).
+            Here \( \text{T}_1 \cdot \text{I}_1 \) represents the cosine similarity between the normalized text embedding \( \text{T}_1 \) and normalized image embedding \( \text{I}_1 \).
+        </p>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
 
 <style>
   .image-row {
