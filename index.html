@@ -8,6 +8,7 @@
         }
     </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-qsJ+5T66nux8hIY3Ba5E96/cZJfj5brTURNDMkQtLeWw9pqqS0xFKtFuQ7roCSlD" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
   <meta charset="utf-8">
   <meta name="description"
@@ -80,7 +81,7 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup style="color:#ed4b82;">1</sup>The University of Hong Kong,</span>
             <span class="author-block"><sup style="color:#007bff;">2</sup>Shanghai AI Laboratory,</span>
-            <span class="author-block"><sup style="color:#6fbf73;">3</sup>Baidu Inc,</span></br>
+            <span class="author-block"><sup style="color:#6fbf73;">3</sup>Baidu Inc,</span>
             <span class="author-block"><sup style="color:#ffac33;">2</sup>Zhejiang Laboratory</span></br>
           </div>
 
@@ -95,7 +96,7 @@
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
@@ -134,14 +135,12 @@
     width: 80%;
   }
 </style>
-
-
 <section class="section">
   <div class="container" style="margin-bottom: 2vh;">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Introduction</h2>
+        <h2 class="title is-2">Introduction</h2>
         <div class="content has-text-justified">
           <p>
             Compositional reasoning capabilities are usually considered as fundamental skills to characterize human perception. Recent studies show that current Vision Language Models (VLMs) surprisingly lack sufficient knowledge with respect to such capabilities. To this end, we propose to thoroughly diagnose the composition representations encoded by VLMs, systematically revealing the potential cause for this weakness. Specifically, we propose evaluation methods from a novel game-theoretic view to assess the vulnerability of VLMs on different aspects of compositional understanding, e.g., relations and attributes. Extensive experimental results demonstrate and validate several insights to understand the incapabilities of VLMs on compositional reasoning, which provide useful and reliable guidance for future studies.
@@ -168,7 +167,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
-          <img src="static/images/task2.png" alt="pipeline" class="center">
+          <img src="static/images/fig1.png" alt="pipeline" class="center">
           <br>
           <p>
           Diagnosing the compositional reasoning capabilities of Vision Language Models (VLMs).
@@ -184,11 +183,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Can text encoders of VLMs understand texts compositionally?</h2>
         <div class="content has-text-justified">
+          <img src="static/images/fig3.png" alt="pipeline" class="center">
           <p>
             Evaluating the sensitivities of text encoders of VLMs to the changes of textual patterns.
-            Specifically, given captions $\mathcal{T}_1$ and $\mathcal{T}_2$ with object words being swapped, we design $Q_O$, $Q_R$ and $Q_{R\&O}$ to assess whether text encoders react correctly to the fine-grained changes of compositionality. 
-            In this case, $Q_{R\&O}$, which measures the interaction changes between object words and relation words, should be of a greater value than $Q_O$ and $Q_R$.
-            Here $\text{T}_1 \cdot \text{I}_1$ represents the cosine similarity between the normalized text embedding $\text{T}_1$ and normalized image embedding $\text{I}_1$.
+            Specifically, given captions \(\mathcal{T}_1\) and \(\mathcal{T}_2\) with object words being swapped, we design \(Q_O\), \(Q_R\) and \(Q_{R\&O}\) to assess whether text encoders react correctly to the fine-grained changes of compositionality. 
+            In this case, \(Q_{R\&O}\), which measures the interaction changes between object words and relation words, should be of a greater value than \(Q_O\) and \(Q_R\).
+            Here \(\text{T}_1 \cdot \text{I}_1\) represents the cosine similarity between the normalized text embedding \(\text{T}_1\) and normalized image embedding \(\text{I}_1\).
         </p>
         <img src="static/images/compare.png" alt="comparison" class="center">
         </div>
