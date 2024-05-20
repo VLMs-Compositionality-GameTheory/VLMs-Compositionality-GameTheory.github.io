@@ -213,7 +213,9 @@
       <div class="content has-text-justified">
         <img src="static/images/fig4.png" alt="pipeline" class="center" width="30%"/>
         <p>
-          
+          Evaluating the sensitivities of image encoders of VLMs to the changes of visual patterns.
+Specifically, given images $\mathcal{I}_1$ and $\mathcal{I}_2$ with object relations being altered, we design $D_{O_1}$, $D_{O_2}$ and $D_{O_1\&O_2}$ to assess whether image encoders react correctly to the fine-grained changes of visual compositionality. 
+In this case, $D_{O_1\&O_2}$, which measures the relation changes between objects, should be of a greater value than $D_{O_1}$ and $D_{O_2}$.
       </p>
       </div>
   </div>
@@ -222,6 +224,9 @@
     <div class="content has-text-justified">
       <img src="static/images/fig5.png" alt="pipeline" class="center" width="40%"/>
       <p>
+        Evaluating whether image encoders and text encoders of VLMs possess mutually matching compositional knowledge with modified sensitivity metrics.
+Specifically, given image-text pairs $\{\mathcal{I}_1,\mathcal{T}_1\}$ and $\{\mathcal{I}_2, \mathcal{T}_2\}$ sharing minimal differences of object relations, we design ${Q_{\mathcal{T}:R\&O \xrightarrow{}\mathcal{I}:O_1}}$, ${Q_{\mathcal{T}:R\&O \xrightarrow{}\mathcal{I}:O_2}}$ and ${Q_{\mathcal{T}:R\&O \xrightarrow{}\mathcal{I}:O_1\& O_2}}$ to assess whether image encoders obtain the corresponding compositional knowledge for text encoders. 
+Besides, we also design $D_{\mathcal{I}:O_1\&O_2 \xrightarrow{}\mathcal{T}:O}$, $D_{\mathcal{I}:O_1\&O_2 \xrightarrow{}\mathcal{T}:R}$ and $D_{\mathcal{I}:O_1\&O_2 \xrightarrow{}\mathcal{T}:R\&O}$ to assess whether text encoders obtain the corresponding compositional knowledge for image encoders. 
     </p>
     </div>
 </div>
