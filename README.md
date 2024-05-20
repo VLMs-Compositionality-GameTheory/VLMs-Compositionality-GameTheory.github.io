@@ -1,1 +1,1 @@
-# VLMs-Compositionality-GameTheory.github.io
+# VLMs-Compositionality-GameTheory
