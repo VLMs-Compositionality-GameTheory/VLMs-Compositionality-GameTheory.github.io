@@ -39,7 +39,19 @@
   <script src="./data/results/data_setting.js" defer></script>
   <script src="./data/results/model_scores.js" defer></script>
   <script src="./visualizer/data/data_public.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-qsJ+5T66nux8hIY3Ba5E96/cZJfj5brTURNDMkQtLeWw9pqqS0xFKtFuQ7roCSlD" crossorigin="anonymous"></script>
+  <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-qsJ+5T66nux8hIY3Ba5E96/cZJfj5brTURNDMkQtLeWw9pqqS0xFKtFuQ7roCSlD" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -190,9 +202,9 @@
           <img src="static/images/fig3.png" alt="pipeline" class="center" width="30%"/>
           <p>
             Evaluating the sensitivities of text encoders of VLMs to the changes of textual patterns.
-            Specifically, given captions \(  \mathcal{T}_1  \) and \(  \mathcal{T}_2  \) with object words being swapped, we design \(  Q_O \), \(  Q_R \) and \(  Q_{R\&O} \) to assess whether text encoders react correctly to the fine-grained changes of compositionality. 
-            In this case, \(  Q_{R\&O} \), which measures the interaction changes between object words and relation words, should be of a greater value than \( Q_O \) and \( Q_R \).
-            Here \( \text{T}_1 \cdot \text{I}_1 \) represents the cosine similarity between the normalized text embedding \( \text{T}_1 \) and normalized image embedding \( \text{I}_1 \).
+            Specifically, given captions $\mathcal{T}_1$ and $\mathcal{T}_2$ with object words being swapped, we design $Q_O$, $Q_R$ and $Q_{R\&O}$ to assess whether text encoders react correctly to the fine-grained changes of compositionality. 
+            In this case, $Q_{R\&O}$, which measures the interaction changes between object words and relation words, should be of a greater value than $Q_O$ and $Q_R$.
+            Here $\text{T}_1 \cdot \text{I}_1$ represents the cosine similarity between the normalized text embedding $\text{T}_1$ and normalized image embedding $\text{I}_1$.
         </p>
         </div>
     </div>
