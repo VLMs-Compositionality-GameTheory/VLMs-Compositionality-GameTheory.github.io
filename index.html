@@ -40,18 +40,17 @@
   <script src="./data/results/model_scores.js" defer></script>
   <script src="./visualizer/data/data_public.js" defer></script>
   <script>
-    window.MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']]
-        },
-        svg: {
-            fontCache: 'global'
-        }
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
+      }
     };
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-qsJ+5T66nux8hIY3Ba5E96/cZJfj5brTURNDMkQtLeWw9pqqS0xFKtFuQ7roCSlD" crossorigin="anonymous"></script>
-
+  </script>
+  <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+  
 </head>
 <body>
 
@@ -191,18 +190,6 @@
   </h1>
   </div>
 </section>
-<script>
-  window.MathJax = {
-      tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      },
-      svg: {
-          fontCache: 'global'
-      }
-  };
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js" integrity="sha384-qsJ+5T66nux8hIY3Ba5E96/cZJfj5brTURNDMkQtLeWw9pqqS0xFKtFuQ7roCSlD" crossorigin="anonymous"></script>
 
 <section class="section">
   <div class="container">
